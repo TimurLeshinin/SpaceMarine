@@ -1,25 +1,29 @@
 import data.ConsoleCommands;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
         MarineManager marineManager = new MarineManager();
-        System.out.println(marineManager.getInfo());
+        Scanner scanner =new Scanner(System.in);
 
+        String command[] = scanner.nextLine().split(" ");
 
 
     }
 
 
-    public static void parseCommand(ConsoleCommands command)
+    public static void parseCommand( String args[])
     {
+        String  command = (args[0]);
         switch (command)
         {
-            case ADD -> {
+            case "ADD" -> {
 
             }
-            case HELP -> {
+            case "HELP" -> {
                 getInfo();
             }
 
